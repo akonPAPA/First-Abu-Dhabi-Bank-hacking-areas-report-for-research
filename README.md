@@ -246,23 +246,6 @@ The report should focus on practical defensive controls:
 
 ---
 
-## Quality Checklist
-
-Before submission, verify:
-
-- [ ] The work focuses on FAB as an organisation, not private individuals.
-- [ ] All evidence is public and passive.
-- [ ] No scanning, exploitation, credential testing, or private-data collection is included.
-- [ ] Screenshots do not expose personal accounts, cookies, or private data.
-- [ ] Each risk links public information to plausible fraud misuse.
-- [ ] Each risk includes a mitigation.
-- [ ] Sources are cited.
-- [ ] The written report is close to 1000 words.
-- [ ] The presentation is planned for 5-7 minutes.
-- [ ] Group charter and individual reflection documents are included.
-
----
-
 ## Status
 
 Current state: repository scaffold for academic research.
