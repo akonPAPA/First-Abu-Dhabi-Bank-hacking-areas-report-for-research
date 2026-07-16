@@ -94,18 +94,9 @@ Place screenshots and diagrams in `assets/` using these exact names.
 Do not upload screenshots that expose private accounts, cookies, browser history, personal messages, or non-public information.
 
 ---
-
-## How to Embed Evidence Images
-
-After adding the images above, use this pattern in the report or README:
-
-```md
 <p align="center">
   <img src="assets/evidence-bankfab-security.png" alt="FAB public fraud and security guidance page" width="850">
 </p>
-```
-
-Use clear captions below each image:
 
 ```md
 **Relevance:** This page is relevant because it shows FAB's public anti-fraud guidance. It supports the analysis of phishing, fake investment advertisements, fake recruitment offers, and impersonation risks.
@@ -121,9 +112,13 @@ The assessment uses a passive OSINT workflow:
 flowchart LR
     A[Public FAB Sources] --> B[Digital Footprint Categories]
     B --> C[Identification Information]
-    C --> D[Cyberfraud Risk Scenarios]
+    C --> C1[Potential Cyberfraud Risk Scenarios]
+    C1 --> C2[If real issue exists]
+    C1 --> C3[If no real issues here ]
+    C2 --> D[Real Security Risk Scenarios]
     D --> E[Impact and Likelihood Assessment]
     E --> F[Mitigation Recommendations]
+    C3 --> G[OK]
 ```
 
 The analysis follows one rule:
