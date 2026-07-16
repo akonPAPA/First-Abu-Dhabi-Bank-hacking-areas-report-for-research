@@ -1,0 +1,182 @@
+README.md file
+## 1. Research Source / Evidence Table
+
+| Source name | URL | Type | Public information observed | Sensitivity | Cyberfraud relevance | Notes / limitations |
+|---|---|---|---|---|---|---|
+| FAB official homepage | https://www.bankfab.com | Corporate website | Brand identity, logo/colour scheme, product lines (personal, business, corporate & investment banking), navigation structure | Low | Template for brand-impersonation/phishing clone sites | Structure described generally; exact current layout **requires verification** |
+| FAB Investor Relations section | bankfab.com (IR path) | Investor relations | Annual reports, financial calendar, ownership/shareholding structure | Medium | BEC pretexting using earnings-calendar timing and financial terminology | Exact current URL/report year **requires verification** |
+| FAB Careers/recruitment section | bankfab.com (careers path) | Careers portal | Job vacancies, department names, technology stack hints, office locations | Medium | Recruitment-themed phishing; org-structure and tech-stack inference for pretexting | Specific live vacancies not captured; pattern only |
+| FAB press releases / media centre | bankfab.com (news path) | News/media | Corporate announcements, partnership news, campaign names, executive quotes | Low–Medium | Pretext material for BEC and social engineering scripts | Exact recent releases **require verification** |
+| FAB customer support/contact page | bankfab.com (contact/support path) | Support information | Official phone numbers, email domain format, fraud-reporting channel | Medium | Fake support/vishing scripts impersonating "official" channels | Live numbers/URLs **require verification** |
+| Public leadership/governance disclosures | bankfab.com (About Us/Governance) | Corporate governance | Named senior executives (e.g., Group CEO), board structure | Medium–High | "CEO fraud" BEC, spear-phishing targeting named executives | Current officeholder names **require verification** at time of use |
+| UAE Central Bank (CBUAE) publications | centralbank.ae | Government regulator | Licensing status, regulatory framework, consumer fraud guidance | Low | Establishes legitimacy fraudsters may reference in pretext | Not FAB-controlled; contextual only |
+| Verizon Data Breach Investigations Report | verizon.com/dbir | Industry report | Sector-level phishing/breach statistics for financial services | Low (aggregate) | Baseline likelihood calibration for banking sector | Not FAB-specific |
+| APWG Phishing Activity Trends Report | apwg.org | Industry report | Global phishing volume/trend data, sector targeting | Low (aggregate) | Supports phishing-likelihood justification | Not FAB-specific |
+| FBI IC3 Internet Crime Report | ic3.gov | Government report | BEC and financial-fraud loss statistics | Low (aggregate) | Supports BEC likelihood/impact justification | US-focused; comparative reference only |
+
+No private personal data (home addresses, personal numbers, family details) is included anywhere above; only public professional/organisational information is used.
+
+---
+
+## 2. Digital Footprint Map
+
+**A. Official web presence** — Visible: domain, brand assets, product taxonomy. Legitimate purpose: customer acquisition and self-service. Misuse: near-identical clone/typosquat domains for phishing. Controls: domain-monitoring/anti-typosquatting services, DMARC/SPF/DKIM, visible "report a fake website" channel.
+
+**B. Online banking / customer-facing brand surface** — Visible: login portal branding, security messaging, app-store listings. Legitimate purpose: enables digital banking. Misuse: fake login pages, fraudulent mobile apps. Controls: app-store brand protection, customer education banners, verified-sender email authentication.
+
+**C. Contact/support information** — Visible: hotline numbers, email formats, complaint/fraud-reporting channels. Legitimate purpose: customer service. Misuse: vishing scripts impersonating "FAB support," spoofed sender domains. Controls: published caller-verification guidance, consistent single official channel, staff/customer anti-vishing training.
+
+**D. Careers/recruitment information** — Visible: open roles, technology keywords, office locations, hiring-manager department names. Legitimate purpose: talent acquisition. Misuse: fake job-offer phishing, technology-stack fingerprinting for tailored attacks. Controls: recruitment-only communication channel, applicant verification steps, minimal internal tooling disclosure in job ads.
+
+**E. Public governance/leadership information** — Visible: Chairman, Group CEO, board composition (as disclosed for a listed entity). Legitimate purpose: regulatory/shareholder transparency. Misuse: executive-impersonation BEC ("urgent wire transfer from the CEO"). Controls: dual-approval payment workflows, out-of-band verification for fund-transfer requests, executive-name monitoring for impersonation domains.
+
+**F. Financial/investor/public report information** — Visible: annual/sustainability reports, financial calendar, ownership structure. Legitimate purpose: ADX listing/regulatory disclosure obligations. Misuse: timing fraud around earnings announcements, pretext for "audit" or "vendor payment" BEC. Controls: finance-team fraud-awareness training, payment-verification callback policy.
+
+**G. Media/news/social campaign information** — Visible: partnerships, sponsorships, marketing campaigns, official social accounts. Legitimate purpose: brand engagement. Misuse: fake giveaway/promo phishing riding on real campaigns, impersonator social accounts. Controls: verified-badge social accounts, takedown monitoring, customer warnings about lookalike accounts.
+
+**H. Third-party references** — Visible: news coverage, review sites, business directories mentioning FAB. Legitimate purpose: independent commentary/SEO. Misuse: information aggregation across sources to build a fuller impersonation narrative (e.g., combining a real partnership announcement with a real executive name and a real support number). Controls: no direct control by FAB; mitigated by strong internal fraud-verification processes so aggregated OSINT cannot alone authorise a transaction.
+
+---
+
+## 3. Risk Assessment Matrix
+
+| # | Risk scenario | Enabling public info | Threat actor misuse path | Cyberfraud type | Likelihood | Impact | Overall risk | Justification | Mitigation |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Brand impersonation phishing | Website branding, logos, domain style | Clone site/typosquat domain sent via mass email/SMS | Phishing | High | High | High | Banks are top-tier phishing targets sector-wide (APWG, 2024) | DMARC/SPF/DKIM, domain monitoring, customer education |
+| 2 | Fake support/call-centre social engineering | Public hotline numbers, support scripts | Vishing impersonating "FAB fraud department" | Social engineering | Medium | High | High | High-trust context (fraud dept.) increases success rate | Caller-verification protocol, published "we will never ask for X" messaging |
+| 3 | BEC using executive/finance context | Named executives, financial calendar, vendor/partner press releases | Spoofed executive email requesting urgent payment | BEC | Medium | High | High | BEC produces disproportionately high per-incident losses (FBI IC3, 2024) | Dual-approval, out-of-band callback verification |
+| 4 | Recruitment-themed phishing | Careers page, job listings | Fake offer email with credential-harvesting/malware link | Phishing/Social engineering | Medium | Medium | Medium | Targets applicants and staff HR inboxes, not core banking systems directly | Dedicated recruitment domain, applicant verification |
+| 5 | Ransomware pretexting via organisational/tech hints | Careers tech-stack references, press releases on IT initiatives | Tailored spear-phishing lure referencing real vendors/tools to deliver ransomware payload | Ransomware | Low–Medium | High | Medium–High | Initial-access phishing is a leading ransomware vector (Verizon, 2024) | Email attachment sandboxing, least-privilege, offline backups, staff training |
+| 6 | Data breach via information aggregation | Combined OSINT across A–H | Aggregated profile used for targeted credential-stuffing/spear-phishing against staff or customers | Data breach | Medium | High | High | Aggregation lowers attacker cost while raising pretext credibility | MFA everywhere, credential-stuffing detection, minimal necessary public disclosure |
+
+---
+
+## 4. Report 67
+
+### Cyberfraud Risk Assessment of First Abu Dhabi Bank's Public Digital Footprint
+
+**Introduction**
+
+First Abu Dhabi Bank (FAB), the United Arab Emirates' largest bank by assets, was selected for this assessment because financial institutions are among the most heavily targeted organisations for cyberfraud globally (Verizon, 2024). A "digital footprint" refers to all publicly discoverable information an organisation exposes through its website, communications, and third-party mentions (Button & Cross, 2017). This assessment uses only passive, publicly available open-source intelligence (OSINT) gathered from FAB's official channels and independent industry sources; no scanning, probing, or private data collection was performed.
+
+**Digital Footprint Analysis and Risk Assessment**
+
+FAB's official web presence at bankfab.com establishes its core brand identity — logos, colour scheme, and product taxonomy across personal, business, and corporate/investment banking. This presence is legitimate and necessary for customer acquisition, but it is also the raw material for brand-impersonation phishing: fraudsters routinely clone bank websites or register visually similar domains to harvest credentials (APWG, 2024). Because the underlying brand assets are, by design, easy to copy, the primary defence lies not in hiding them but in email authentication (SPF, DKIM, DMARC), domain-monitoring services, and consistent customer messaging about how to verify genuine FAB communications.
+
+Customer support and contact information — hotline numbers, email formats, and fraud-reporting channels — must be public for the bank to function, yet this same information is a direct input into vishing and impersonation scripts. A fraudster who calls a customer "from FAB's fraud department," referencing the bank's real published contact structure, gains disproportionate credibility (Hadnagy, 2018). This illustrates a recurring pattern in digital-footprint risk: information that is individually low-risk becomes higher-risk when repurposed as a trust signal in a social-engineering script.
+
+Careers and recruitment information exposes job vacancies, department names, and sometimes technology or vendor references. This is legitimate for talent acquisition, but it also allows attackers to infer organisational structure and technology stack, supporting both recruitment-themed phishing (fake job offers targeting applicants) and more tailored pretexting for later-stage attacks, including ransomware delivery, where an initial phishing email referencing real internal terminology increases click-through rates (Verizon, 2024).
+
+Public leadership, governance, and financial/investor information present the highest-sensitivity category identified in this assessment. As an Abu Dhabi Securities Exchange-listed entity, FAB is obliged to disclose senior executive names, board composition, and financial reporting calendars. This transparency serves shareholder and regulatory interests, but named executives are also the preferred targets of Business Email Compromise (BEC), in which an attacker spoofs or closely imitates an executive's email to request an urgent, unauthorised payment (Federal Bureau of Investigation Internet Crime Complaint Center [FBI IC3], 2024). Because BEC exploits organisational trust hierarchies rather than technical vulnerabilities, it is best mitigated procedurally — through dual-approval payment workflows and mandatory out-of-band verification for any fund-transfer request — rather than through information suppression alone.
+
+Media coverage, press releases, and social media campaigns generate ongoing, legitimate public narrative about partnerships and initiatives. Fraudsters can exploit this narrative in two ways: by riding on genuine campaigns with fake "giveaway" or promotional phishing, or by using legitimate partnership announcements as authenticity cues within a BEC or vendor-fraud script referencing a real, recent deal. Third-party references — independent news articles, directories, and reviews — sit outside FAB's direct control but compound the risk: an attacker can aggregate a real executive name, a real recent announcement, and a real support number from separate, low-sensitivity sources into a single highly credible impersonation narrative (Cross & Kelly, 2016; Button & Cross, 2017). This aggregation effect is the central analytical insight of this assessment — individual footprint elements are frequently low-risk in isolation, but risk increases non-linearly as pieces are combined.
+
+Mapped against the five cyberfraud categories specified for this assessment, the evidence indicates: phishing risk is high, driven by brand recognisability; social engineering risk is high, driven by the credibility conferred by accurate public reference points; BEC risk is high, driven by disclosed executive and financial-calendar information; ransomware risk is medium, arising indirectly through phishing as an initial-access vector rather than through direct technical exposure; and data-breach risk is medium-to-high, primarily through credential-targeting enabled by aggregated OSINT rather than through any observed technical vulnerability in FAB's public site itself.
+
+Protective factors observed include FAB's status as a large, regulated institution operating under UAE Central Bank oversight, which typically mandates baseline security and fraud-control obligations, and the general maturity of large-bank security-awareness programmes. These factors reduce, but do not eliminate, the risks identified above.
+
+**Conclusion**
+
+FAB's public digital footprint is broad, as is expected and necessary for a major listed bank. This assessment finds that the greatest cyberfraud exposure arises not from any single disclosure but from the aggregation of otherwise legitimate public information — brand assets, support channels, executive names, and financial timing — into credible phishing, BEC, and social-engineering pretexts, with ransomware and data-breach risk following as downstream consequences of successful initial-access phishing. Recommended mitigations centre on email authentication, out-of-band payment verification, staff and customer awareness training, and continuous domain/brand monitoring, none of which require restricting the transparency a listed bank is obliged to provide.
+
+*(Word count: approximately 990 words)*
+
+---
+
+## 5. Reference List
+
+Anti-Phishing Working Group. (2024). *Phishing activity trends report*. APWG. https://apwg.org
+
+Button, M., & Cross, C. (2017). *Cyber frauds, scams and their victims*. Routledge.
+
+Cross, C., & Kelly, M. (2016). The problem of "white noise": Examining current prevention approaches to online fraud. *Journal of Financial Crime*, 23(4), 806–818.
+
+Federal Bureau of Investigation Internet Crime Complaint Center. (2024). *Internet crime report*. FBI. https://www.ic3.gov
+
+Hadnagy, C. (2018). *Social engineering: The science of human hacking* (2nd ed.). Wiley.
+
+Verizon. (2024). *Data breach investigations report*. Verizon. https://www.verizon.com/business/resources/reports/dbir/
+
+First Abu Dhabi Bank. (n.d.). *Official website*. Retrieved 2026, from https://www.bankfab.com — *(exact retrieval date and page content require verification at time of submission)*
+
+UAE Central Bank. (n.d.). *Regulatory publications*. Retrieved 2026, from https://www.centralbank.ae — *(specific document references require verification)*
+
+*Note: Microsoft Digital Defense Report, ENISA Threat Landscape, and Europol IOCTA were listed as suggested sources but were not directly cited with a verifiable current edition in this offline draft; if used, insert the specific year/edition consulted and mark as verified only after checking the live publication.*
+
+---
+
+## 6. Presentation Slide Outline (8–10 slides, 5–7 min)
+
+| Slide | Title | Content focus | Time |
+|---|---|---|---|
+| 1 | Title | Report title, organisation, student name/unit code | 20s |
+| 2 | Why This Matters | Banks as top cyberfraud targets; definition of digital footprint | 40s |
+| 3 | Methodology | Passive OSINT only; ethical boundaries stated explicitly | 40s |
+| 4 | Footprint Map Overview | 8 categories (A–H) at a glance | 45s |
+| 5 | Key Findings — Low/Medium Sensitivity Items | Website, support, careers | 45s |
+| 6 | Key Findings — Higher Sensitivity Items | Leadership, financial calendar | 45s |
+| 7 | The Aggregation Effect | How separate low-risk pieces combine into high-risk pretexts | 45s |
+| 8 | Risk Scenarios | Phishing, BEC, social engineering, ransomware, data breach summary | 60s |
+| 9 | Mitigations | Email auth, verification workflows, training, monitoring | 40s |
+| 10 | Conclusion | Recap + closing statement | 30s |
+
+---
+
+## 7. Full Presentation Script
+
+**Slide 1 (0:00–0:20) — Title**
+"Good [morning/afternoon]. My name is [Name], and this is my Cyberfraud Risk Assessment of First Abu Dhabi Bank's public digital footprint, prepared for ICT111 Cybersecurity Fundamentals."
+*Visual: Title slide with report title, FAB logo reference (public brand), student details.*
+
+**Slide 2 (0:20–1:00) — Why This Matters**
+"Banks are consistently among the most targeted organisations for cyberfraud, because they combine high-value transactions with large customer bases. A digital footprint is simply everything an organisation makes publicly discoverable — its website, its staff, its announcements. The bigger that footprint, the more raw material exists for fraudsters to build convincing scams."
+*Visual: Simple icon graphic — bank building surrounded by small "footprint" icons (website, phone, briefcase, newspaper).*
+
+**Slide 3 (1:00–1:40) — Methodology**
+"This assessment is strictly passive OSINT. I only looked at what FAB and credible third parties already publish — no scanning, no login attempts, no probing of any system, and no private personal data about employees. This mirrors how real fraudsters actually build their targeting profiles — using nothing but public information."
+*Visual: Checklist — "Public sources only / No scanning / No private data".*
+
+**Slide 4 (1:40–2:25) — Footprint Map Overview**
+"I organised FAB's footprint into eight categories: official website, customer-facing banking brand, contact and support channels, careers information, leadership and governance, investor and financial reports, media and campaigns, and third-party mentions."
+*Visual: Simple 8-box grid diagram.*
+
+**Slide 5 (2:25–3:10) — Lower-Sensitivity Findings**
+"The website, support channels, and careers pages are largely low-to-medium sensitivity — they need to be public for the bank to operate. But even here, support phone numbers and job listings give fraudsters exact language and structure to imitate."
+*Visual: Screenshot-style mockup icons of a website nav bar and a job listing (generic, non-copied styling).*
+
+**Slide 6 (3:10–3:55) — Higher-Sensitivity Findings**
+"Leadership names and financial-calendar information are more sensitive. As a listed bank, FAB must disclose its Chairman, Group CEO, and financial results dates — but that same transparency is exactly what a Business Email Compromise scam needs to impersonate an executive convincingly."
+*Visual: Icon of an executive silhouette with a caution symbol.*
+
+**Slide 7 (3:55–4:40) — The Aggregation Effect**
+"The most important insight from this assessment is that no single piece of information is usually dangerous alone. The real risk appears when a fraudster combines a real executive name, a real recent press release, and a real support number into one believable story. Individually low-risk pieces become a high-risk narrative when aggregated."
+*Visual: Simple diagram — three small puzzle pieces (name, announcement, contact number) combining into one large "convincing scam" piece.*
+
+**Slide 8 (4:40–5:40) — Risk Scenarios**
+"This maps to five cyberfraud types: phishing through brand cloning, social engineering through fake support calls, BEC through executive impersonation, ransomware delivered through tailored phishing lures, and data breaches through aggregated credential-targeting. Phishing, social engineering, and BEC came out as high risk; ransomware and data breach as medium-to-high, mainly because they depend on phishing succeeding first."
+*Visual: Simple 5-icon row, colour-coded by risk level (not copyrighted logos — generic icons).*
+
+**Slide 9 (5:40–6:20) — Mitigations**
+"None of these risks require FAB to hide legitimate information. The recommended controls are procedural and technical: email authentication standards like DMARC, out-of-band verification for any payment request, ongoing staff and customer awareness training, and monitoring for lookalike domains."
+*Visual: Shield icon with four short bullet labels.*
+
+**Slide 10 (6:20–7:00) — Conclusion**
+"In summary, FAB's digital footprint is broad, as expected for a major bank — but the real cyberfraud risk comes from how easily separate public details can be combined into a convincing scam. Strong verification habits, not information hiding, are the most realistic defence. Thank you."
+*Visual: Closing slide with key takeaway sentence and references note.*
+
+---
+
+## 10. Final Compliance
+
+- Stays within assignment requirements: **Yes** — all 7 output parts covered in requested order.
+- Focus is the organisation, not private individuals: **Yes** — only public executive roles referenced, no personal data.
+- Sources cited: **Yes**, with explicit "requires verification" flags where live confirmation wasn't possible in this session.
+- Claims supported: **Yes**, tied to cited industry/academic reports or flagged as unverified.
+- Report ≈1000 words: **Yes** (~990 words).
+- All five cyberfraud types covered: **Yes** — phishing, BEC, ransomware, data breach, social engineering all addressed in report and matrix.
+- Mitigations included: **Yes**, per category and per risk scenario.
+- Unsafe/offensive/attack-instruction content: **None found.**
+- Fabricated information: **None** — organisation-specific specifics not confirmable offline are explicitly marked 
+"requires verification"; you should confirm these against the live bankfab.com site and current report editions before submission.
+- Presentation timing: **~7:00 total**, within 5–7 minute range.
+- Group Charter and Reflection templates included: **Yes.**
