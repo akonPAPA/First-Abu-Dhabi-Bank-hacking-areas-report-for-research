@@ -98,10 +98,6 @@ Do not upload screenshots that expose private accounts, cookies, browser history
   <img src="assets/evidence-bankfab-security.png" alt="FAB public fraud and security guidance page" width="850">
 </p>
 
-```md
-**Relevance:** This page is relevant because it shows FAB's public anti-fraud guidance. It supports the analysis of phishing, fake investment advertisements, fake recruitment offers, and impersonation risks.
-```
-
 ---
 
 ## Research Method
