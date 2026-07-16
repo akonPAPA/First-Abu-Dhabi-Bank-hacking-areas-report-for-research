@@ -1,7 +1,7 @@
 # First Abu Dhabi Bank — Cyberfraud Risk Assessment
 
 <p align="center">
-  <img src="assets/cover.png" alt="First Abu Dhabi Bank cyberfraud risk assessment cover" width="900">
+  <img src="assets/cover.svg" alt="First Abu Dhabi Bank cyberfraud risk assessment cover" width="900">
 </p>
 
 <p align="center">
@@ -81,7 +81,7 @@ Place screenshots and diagrams in `assets/` using these exact names.
 
 | File | Type | Purpose |
 |---|---|---|
-| `assets/cover.png` | Cover image | Clean visual header for the project. No private data. |
+| `assets/cover.svg` | Cover graphic | Repository header already included. |
 | `assets/evidence-bankfab-homepage.png` | Screenshot | Public FAB homepage / banking service categories. |
 | `assets/evidence-bankfab-contact.png` | Screenshot | Public customer support and contact channels. |
 | `assets/evidence-bankfab-careers.png` | Screenshot | Public careers page and recruitment-fraud warning. |
@@ -184,7 +184,7 @@ Risk levels are preliminary and should be justified in the written report using 
 .
 ├── README.md
 ├── assets/
-│   ├── cover.png
+│   ├── cover.svg
 │   ├── evidence-bankfab-homepage.png
 │   ├── evidence-bankfab-contact.png
 │   ├── evidence-bankfab-careers.png
