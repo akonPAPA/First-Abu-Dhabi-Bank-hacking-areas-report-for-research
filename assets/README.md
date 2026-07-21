@@ -1,33 +1,38 @@
-# Visual Evidence Guide
+Visual Evidence Guide
 
-This folder stores public screenshots and diagrams used in the FAB cyberfraud risk assessment.
+Author: Akan Muhametgali
 
-## Required Images
+This folder stores public screenshots and original diagrams used in the First Abu Dhabi Bank cyberfraud risk assessment.
 
-| File | Capture source | Notes |
+| File | Public source or origin | Academic purpose |
 |---|---|---|
-| `evidence-bankfab-homepage.png` | `https://www.bankfab.com/en-ae/personal` | Capture the public homepage/service area. Do not capture browser history or account state. |
-| `evidence-bankfab-contact.png` | `https://www.bankfab.com/en-ae/contact-us` | Capture public support/contact categories. Avoid excessive zoom on individual emails. |
-| `evidence-bankfab-careers.png` | `https://www.bankfab.com/en-ae/about-fab/careers` | Capture the public recruitment-fraud warning and careers overview. |
-| `evidence-bankfab-security.png` | `https://www.bankfab.com/en-ae/about-fab/security-and-certifications` | Capture public anti-fraud guidance, OTP warning, and fake-site warning. |
-| `evidence-bankfab-investor-relations.png` | `https://www.bankfab.com/en-ae/about-fab/investor-relations` | Capture public reports/investor-relations context. |
-| `digital-footprint-map.png` | Self-made diagram | Map official website, contact, careers, security, investor relations, social media. |
-| `risk-matrix.png` | Self-made diagram | Show likelihood vs impact for the selected cyberfraud scenarios. |
-| `fraud-risk-flow.png` | Self-made diagram | Show public information -> misuse -> fraud risk -> mitigation. |
+| `evidence-bankfab-homepage.png` | https://www.bankfab.com/en-ae/personal | Record public brand and banking-service categories |
+| `evidence-bankfab-contact.png` | https://www.bankfab.com/en-ae/contact-us | Record public support and contact categories |
+| `evidence-bankfab-careers.png` | https://www.bankfab.com/en-ae/about-fab/careers | Record the public recruitment-fraud warning and careers context |
+| `evidence-bankfab-security.png` | https://www.bankfab.com/en-ae/about-fab/security-and-certifications | Record public OTP, suspicious-message and false-site guidance |
+| `evidence-bankfab-investor-relations.png` | https://www.bankfab.com/en-ae/about-fab/investor-relations | Record public reports, presentations and financial-calendar context |
+| `digital-footprint-map.png` | Original diagram | Show the categories included in the public digital footprint |
+| `risk-matrix.png` | Original diagram | Show likelihood and impact ratings from the written assessment |
+| `fraud-risk-flow.png` | Original diagram | Show public information -> possible misuse -> fraud risk -> control |
 
-## Screenshot Rules
+Screenshot rules
 
-- Use only public pages.
-- Do not log into any account.
-- Do not include cookies, browser profiles, email, bookmarks, or private tabs.
-- Do not include private personal data.
-- Do not include leaked credentials, scanning output, or exploit results.
-- Keep screenshots clean, readable, and relevant to the assessment.
+Use only pages that are available without authentication.
 
-## Recommended Caption Format
+Do not log into an account or display an account state.
 
-```md
-**Evidence:** Public FAB fraud and security guidance page.
+Do not include browser profiles, cookies, bookmarks, private tabs, email inboxes, student IDs or personal messages.
 
-**Risk relevance:** Supports analysis of phishing, fake websites, OTP scams, fake investment advertisements, and impersonation risks.
-```
+Do not include employee personal contact details, leaked information, credentials, scanning output or exploit material.
+
+Crop each image to the evidence required by the report. Add the page title, public URL and access date in the presentation caption.
+
+A screenshot demonstrates that information was publicly visible on the recorded date. It does not demonstrate a vulnerability, compromise or successful attack.
+
+Recommended caption
+
+Evidence: Public FAB security and fraud guidance page.
+
+Accessed: 21 July 2026.
+
+Relevance: Supports the assessment of impersonation, false websites, suspicious messages and OTP-related fraud while also documenting an existing protective control.
