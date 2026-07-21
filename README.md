@@ -1,250 +1,66 @@
-# First Abu Dhabi Bank — Cyberfraud Risk Assessment
+First Abu Dhabi Bank Cyberfraud Risk Assessment
 
-<p align="center">
-  <img src="assets/cover.svg" alt="First Abu Dhabi Bank cyberfraud risk assessment cover" width="900">
-</p>
+Author: Akan Muhametgali
 
-<p align="center">
-  <strong>Passive OSINT · Digital Footprint Analysis · Phishing · BEC · Social Engineering · Risk Mitigation</strong>
-</p>
+Unit: ICT111 Cybersecurity Fundamentals
 
-<p align="center">
-  <img src="https://img.shields.io/badge/scope-academic%20research-2f6f9f" alt="Academic research">
-  <img src="https://img.shields.io/badge/method-passive%20OSINT-2f855a" alt="Passive OSINT">
-  <img src="https://img.shields.io/badge/active%20testing-not%20performed-b91c1c" alt="No active testing">
-  <img src="https://img.shields.io/badge/status-in%20progress-6b7280" alt="In progress">
-</p>
+Project type: Academic digital-footprint and cyberfraud risk assessment
 
----
+Research date: 21 July 2026
 
-## Overview
+Privacy notice: Student identification numbers and the second group member’s personal details are intentionally excluded from this public repository. Those details belong only in the private LMS submission.
 
-This repository contains an academic cyberfraud risk assessment of **First Abu Dhabi Bank (FAB)**, using only publicly available information from official and open sources.
+Purpose
 
-The work is designed for the ICT111 Cybersecurity Fundamentals assessment theme: analysing an organisation's digital footprint and explaining how public identification information may increase exposure to cyberfraud.
+This repository documents a defensive assessment of how publicly available information about First Abu Dhabi Bank PJSC may contribute to cyberfraud exposure. The work examines phishing, false customer-support contact, Business Email Compromise, recruitment fraud, ransomware pretexting and credential-related data breaches.
 
-The study does **not** attempt to test, scan, exploit, or access any FAB system. It is a defensive research project focused on public exposure, fraud scenarios, and mitigation.
+The repository does not report a penetration test and does not claim that FAB has a confirmed technical vulnerability. It records plausible fraud scenarios derived from public information and maps them to preventive controls.
 
----
+Research question
 
-## Research Question
+How can publicly available information within First Abu Dhabi Bank’s digital footprint contribute to cyberfraud exposure, and what controls can reduce the resulting risk?
 
-> How can publicly available information about First Abu Dhabi Bank's digital footprint contribute to cyberfraud exposure, and what controls can reduce that exposure?
+Method
 
----
+The assessment uses passive open-source research. Evidence was collected from public FAB pages, public corporate material and current academic, government and industry sources. Each item was considered in terms of its legitimate purpose, sensitivity, possible misuse, likely consequences and relevant controls.
 
-## Target Organisation
+No vulnerability scanning, port scanning, login attempts, credential testing, brute forcing, exploitation, phishing simulation, private-area access, leaked-data collection or contact with FAB employees or customers was performed.
 
-| Field | Detail |
+The working model is:
+
+public information -> possible misuse -> fraud scenario -> likelihood and impact -> preventive controls
+
+Repository contents
+
+| Path | Purpose |
 |---|---|
-| Organisation | First Abu Dhabi Bank PJSC |
-| Short name | FAB |
-| Sector | Banking and financial services |
-| Country focus | United Arab Emirates |
-| Main website | `https://www.bankfab.com` |
-| Research type | Passive public-source risk assessment |
+| `report/cyberfraud-risk-assessment.md` | Main report of approximately 1000 words |
+| `report/source-evidence-table.md` | Public-source evidence register |
+| `report/risk-matrix.md` | Likelihood and impact assessment |
+| `presentation/slide-outline.md` | Presentation structure for a 5–7 minute recording |
+| `presentation/speaker-script.md` | Speaker script for Akan Muhametgali |
+| `references/references.md` | Academic, official and industry references |
+| `appendix/privacy-and-submission-note.md` | Public-repository privacy and submission boundaries |
+| `assets/` | Public screenshots and diagrams used as visual evidence |
 
-FAB's public web presence includes personal banking, business banking, corporate banking, investment banking, Islamic banking, private banking, customer care, careers, investor relations, fraud/security guidance, and social media links.
+Evidence scope
 
----
+The public footprint considered in this project includes the FAB website and branding, customer-support channels, careers and recruitment information, investor relations, financial reports, security guidance, media activity, social media and third-party references.
 
-## Ethical Scope
+FAB’s public security page warns customers not to share account details or one-time passwords with people claiming to represent the bank and provides channels for reporting suspicious messages and fraudulent websites. Its careers page also warns that legitimate job offers do not require applicants to pay recruitment-related fees and should not arrive from unofficial communication channels. These published warnings are treated as existing protective factors rather than evidence of a weakness.
 
-This repository is limited to safe academic analysis.
+Current context sources
 
-### Allowed
+The research uses FAB’s 2025 Annual Report and current 2026 investor-relations material, the APWG Phishing Activity Trends Report for the first quarter of 2026, the Verizon 2026 Data Breach Investigations Report and the FBI IC3 2025 Internet Crime Report. Sector-level statistics are used only to establish general context and are not presented as FAB-specific incident data.
 
-- Reading public web pages.
-- Reviewing official FAB pages, reports, contact pages, careers pages, and fraud-awareness pages.
-- Capturing screenshots of public pages for evidence.
-- Mapping public information to high-level cyberfraud risks.
-- Recommending defensive controls.
+Interpretive limits
 
-### Not Allowed
+Public information can support a plausible fraud pretext without proving that an attack has occurred or would succeed. Risk ratings in this repository express reasoned likelihood and impact judgements, not findings from active security testing. Public pages may change after the recorded access date.
 
-- Vulnerability scanning.
-- Port scanning.
-- Brute forcing.
-- Credential testing.
-- Phishing simulation.
-- Exploit development.
-- Scraping private/authenticated areas.
-- Publishing leaked data.
-- Doxxing employees or customers.
-- Collecting personal information unrelated to the organisation-level risk assessment.
+Academic integrity
 
----
+The public repository identifies Akan Muhametgali as an author but omits student IDs and private group records. The final LMS submission must include both group members’ names and student IDs, the official Group Charter and each member’s separate reflection. Those private documents must not be committed here.
 
-## Visual Evidence Files
+Formatting note
 
-Place screenshots and diagrams in `assets/` using these exact names.
-
-| File | Type | Purpose |
-|---|---|---|
-| `assets/cover.svg` | Cover graphic | Repository header already included. |
-| `assets/evidence-bankfab-homepage.png` | Screenshot | Public FAB homepage / banking service categories. |
-| `assets/evidence-bankfab-contact.png` | Screenshot | Public customer support and contact channels. |
-| `assets/evidence-bankfab-careers.png` | Screenshot | Public careers page and recruitment-fraud warning. |
-| `assets/evidence-bankfab-security.png` | Screenshot | Public fraud/security guidance page. |
-| `assets/evidence-bankfab-investor-relations.png` | Screenshot | Public investor relations / reports page. |
-| `assets/digital-footprint-map.png` | Diagram | Summary of public digital footprint categories. |
-| `assets/risk-matrix.png` | Diagram | Likelihood × impact matrix for cyberfraud scenarios. |
-| `assets/fraud-risk-flow.png` | Diagram | Public information → misuse → fraud risk → mitigation. |
-
-Do not upload screenshots that expose private accounts, cookies, browser history, personal messages, or non-public information.
-
----
-<p align="center">
-  <img src="assets/evidence-bankfab-security.png" alt="FAB public fraud and security guidance page" width="850">
-</p>
-
----
-
-## Research Method
-
-The assessment uses a passive OSINT workflow:
-
-```mermaid
-flowchart LR
-    A[Public FAB Sources] --> B[Digital Footprint Categories]
-    B --> C[Identification Information]
-    C --> C1[Potential Cyberfraud Risk Scenarios]
-    C1 --> C2[If real issue exists]
-    C1 --> C3[If no real issues here ]
-    C2 --> D[Real Security Risk Scenarios]
-    D --> E[Impact and Likelihood Assessment]
-    E --> F[Mitigation Recommendations]
-    C3 --> G[OK]
-```
-
-The analysis follows one rule:
-
-```text
-public information -> possible misuse -> fraud risk -> mitigation
-```
-
----
-
-## Digital Footprint Categories
-
-| Category | Public information to review | Risk relevance |
-|---|---|---|
-| Official web presence | Website structure, banking segments, online service links | Brand impersonation and phishing themes. |
-| Customer support | Contact channels, service categories, complaint routes | Fake support scams and social engineering. |
-| Careers | Recruitment warnings, job portal links, career programmes | Fake job offers, HR phishing, malicious CV lures. |
-| Security guidance | Fraud reporting, OTP warnings, fake-site warnings | Existing controls and public fraud patterns. |
-| Investor relations | Annual reports, presentations, financial calendar, IR contacts | BEC narratives, executive impersonation, investment scams. |
-| Social media | Official channels and public campaigns | Fake ads, impersonation, malicious promotion campaigns. |
-
----
-
-## Risk Scenarios
-
-| ID | Scenario | Main exposure | Risk level |
-|---|---|---|---|
-| R1 | Brand impersonation phishing | Public banking brand, login/service language | High |
-| R2 | Fake customer support | Public contact workflows and support categories | High |
-| R3 | Recruitment fraud | Public careers page and job portal references | Medium |
-| R4 | Business Email Compromise | Public departments, investor/contact context, public emails | Medium |
-| R5 | Fake investment advertising | Public financial brand and investor-facing materials | High |
-| R6 | Social engineering against customers | Public service narratives and support scripts | High |
-| R7 | Ransomware pretexting | Public organisational context and business functions | Medium |
-
-Risk levels are preliminary and should be justified in the written report using evidence and references.
-
----
-
-## Expected Deliverables
-
-| Deliverable | File |
-|---|---|
-| 1000-word written report | `report/cyberfraud-risk-assessment.md` |
-| Source and evidence table | `report/source-evidence-table.md` |
-| Risk assessment matrix | `report/risk-matrix.md` |
-| Presentation outline | `presentation/slide-outline.md` |
-| Speaker script | `presentation/speaker-script.md` |
-| Group charter appendix | `appendix/group-charter.md` |
-| Individual reflection template | `appendix/individual-reflection.md` |
-| Image evidence | `assets/` |
-
----
-
-## Suggested Repository Structure
-
-```text
-.
-├── README.md
-├── assets/
-│   ├── cover.svg
-│   ├── evidence-bankfab-homepage.png
-│   ├── evidence-bankfab-contact.png
-│   ├── evidence-bankfab-careers.png
-│   ├── evidence-bankfab-security.png
-│   ├── evidence-bankfab-investor-relations.png
-│   ├── digital-footprint-map.png
-│   ├── risk-matrix.png
-│   └── fraud-risk-flow.png
-├── report/
-│   ├── cyberfraud-risk-assessment.md
-│   ├── source-evidence-table.md
-│   └── risk-matrix.md
-├── presentation/
-│   ├── slide-outline.md
-│   └── speaker-script.md
-├── appendix/
-│   ├── group-charter.md
-│   └── individual-reflection.md
-└── references/
-    └── references.md
-```
-
----
-
-## Core Evidence Sources
-
-Use official and credible sources first.
-
-| Source | URL | Use in research |
-|---|---|---|
-| FAB official website | `https://www.bankfab.com/en-ae/personal` | Public banking services, customer-facing brand surface, online banking links. |
-| About FAB | `https://www.bankfab.com/en-ae/about-fab` | Organisation profile, governance, careers, investor relations, security sections. |
-| Contact & Support | `https://www.bankfab.com/en-ae/contact-us` | Support categories, public service channels, public contact routes. |
-| Careers | `https://www.bankfab.com/en-ae/about-fab/careers` | Recruitment footprint and public recruitment-fraud warning. |
-| Security and Certifications | `https://www.bankfab.com/en-ae/about-fab/security-and-certifications` | OTP warning, suspicious-message reporting, fake-site warning, security controls. |
-| Investor Relations | `https://www.bankfab.com/en-ae/about-fab/investor-relations` | Annual reports, investor presentations, financial calendar, IR contact context. |
-| Verizon DBIR | `https://www.verizon.com/business/resources/reports/dbir/` | Industry evidence for social engineering, phishing, credential abuse, and breaches. |
-| FBI IC3 | `https://www.ic3.gov/` | Public evidence for BEC, investment fraud, phishing, and financial cybercrime. |
-| ENISA Threat Landscape | `https://www.enisa.europa.eu/topics/cyber-threats/threats-and-trends` | European threat context for phishing, ransomware, and social engineering. |
-| APWG Phishing Reports | `https://apwg.org/trendsreports/` | Phishing trend evidence. |
-| NIST Cybersecurity Framework | `https://www.nist.gov/cyberframework` | Defensive control mapping. |
-
----
-
-## Mitigation Themes
-
-The report should focus on practical defensive controls:
-
-- Customer anti-phishing education.
-- Verified communication channels.
-- Domain and brand-monitoring programmes.
-- Fraud-reporting workflows.
-- DMARC, SPF, and DKIM enforcement.
-- Out-of-band verification for payment changes.
-- Recruitment fraud warnings.
-- Vendor and invoice verification.
-- Security awareness for customer support and finance teams.
-- Takedown process for fake websites and fake social media ads.
-
----
-
-## Status
-
-Current state: repository scaffold for academic research.
-
-Next steps:
-
-1. Add screenshots to `assets/`.
-2. Build the evidence table.
-3. Write the 1000-word report.
-4. Create the presentation script.
-5. Final-check citations and ethical boundaries.
+The LMS report should use Arial consistently. Student details, institutional cover-page fields and the second member’s reflection should be added only to private submission copies.
